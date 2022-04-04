@@ -5,10 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementUtil {
@@ -306,4 +310,134 @@ public class ElementUtil {
 		
 	}
 
+	
+	/********** Wait on Frame/s ************/
+	
+	
+	public void waitForFrameByNameOrId(String nameOrID, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(nameOrID));
+	}
+	
+	public void waitForFrameByIndex(int frameIndex, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameIndex));
+	}
+	
+	public void waitForFrameByLocator(By frameLocator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
+	}
+
+	public void waitForFrameByElement(WebElement frameElement, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
+	}
+	
+	public void clickElementWhenReady(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+	}
+	
+	public void clickElementWhenReady(By locator, int timeout, long intervalTime) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout), Duration.ofMillis(intervalTime));
+		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+	}
+	
+	public WebElement waitForElementPresntUsingFluentWait(By locator, int timeOut, int pollingTime) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingTime))
+				.ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class)
+				.withMessage(Error.ELEMENT_NOT_FOUND_ERROR_MSG);
+
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+	}
+	
+	public WebElement waitForElementUsingWebDriverWait(By locator, int timeOut, int pollingTime) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		wait
+		.pollingEvery(Duration.ofSeconds(pollingTime))
+		.ignoring(NoSuchElementException.class)
+		.ignoring(StaleElementReferenceException.class)
+		.withMessage(Error.ELEMENT_NOT_FOUND_ERROR_MSG);
+		
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		
+	}
+	
+	/********************** Custom wait time **********/
+	
+	
+	public WebElement retryingElement(By locator, int timeout) {
+		
+		WebElement element = null;
+		int attempts = 0;
+		
+		while(attempts < timeout) {
+			
+			try {
+				element = getElement(locator);
+				break;
+			}
+			catch (NoSuchElementException e) {
+				System.out.println("element is not found in attempt : "+ attempts + " : "+ locator);
+				try {
+					Thread.sleep(500);	
+				} catch (InterruptedException e1) {
+					System.out.println(e1);
+				}				
+			}
+			attempts++;			
+		}
+		
+		if(element == null) {
+			try {
+				throw new Exception();
+			} catch (Exception e) {
+				System.out.println("element is not found exception ... tried for : "+ timeout + 
+									" with the interval of : "+ 500 + "ms");
+			}
+		}
+		return element;		
+	}
+	
+	
+	public WebElement retryingElement(By locator, int timeout, long pollingTime) {
+		
+		WebElement element = null;
+		int attempts = 0;
+		
+		while(attempts < timeout) {
+			
+			try {
+				element = getElement(locator);
+				break;
+			}
+			catch (NoSuchElementException e) {
+				System.out.println("element is not found in attempt : "+ attempts + " : "+ locator);
+				try {
+					Thread.sleep(pollingTime);	
+				} catch (InterruptedException e1) {
+					System.out.println(e1);
+				}				
+			}
+			attempts++;			
+		}
+		
+		if(element == null) {
+			try {
+				throw new Exception();
+			} catch (Exception e) {
+				System.out.println("element is not found exception ... tried for : "+ timeout + 
+									" with the interval of : "+ pollingTime + "ms");
+			}
+		}
+		return element;		
+	}
+
+	
+	
 }
