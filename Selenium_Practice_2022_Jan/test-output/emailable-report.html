@@ -8,36 +8,26 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">20,639</td><td></td><td></td></tr>
+<tr><th colspan="7">Regression Test</th></tr>
+<tr><td><a href="#t0">OpenCart Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">12,658</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">OrangeHRM Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">15,834</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Google Test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">8,314</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num attn">1</th><th class="num">36,806</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">myTest.SampleTest</td><td><a href="#m0">googleSearchBtnTest</a></td><td rowspan="1">1649273526374</td><td rowspan="1">10056</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">myTest.SampleTest</td><td><a href="#m1">searchTest</a></td><td rowspan="1">1649273536437</td><td rowspan="1">64</td></tr><tr class="passedeven"><td><a href="#m2">urlTest</a></td><td rowspan="1">1649273536504</td><td rowspan="1">10</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OpenCart Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">AppTest.OpenCartTest</td><td><a href="#m0">registerLinkTest</a></td><td rowspan="1">1649360526469</td><td rowspan="1">2113</td></tr><tr class="passedeven"><td><a href="#m1">urlTest</a></td><td rowspan="1">1649360528588</td><td rowspan="1">10</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">OrangeHRM Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">AppTest.OrangeHRMTest</td><td><a href="#m2">contactSalesTest</a></td><td rowspan="1">1649360534760</td><td rowspan="1">9712</td></tr><tr class="passedeven"><td><a href="#m3">urlTest</a></td><td rowspan="1">1649360544473</td><td rowspan="1">9</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Google Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">AppTest.GoogleTest</td><td><a href="#m4">googleSearchBtnTest</a></td><td rowspan="1">1649360552712</td><td rowspan="1">51</td></tr><tr><th colspan="4">Google Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">AppTest.GoogleTest</td><td><a href="#m5">searchTest</a></td><td rowspan="1">1649360550043</td><td rowspan="1">2664</td></tr><tr class="passedeven"><td><a href="#m6">urlTest</a></td><td rowspan="1">1649360552768</td><td rowspan="1">13</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">myTest.SampleTest#googleSearchBtnTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;btnk&apos;]&quot;}
-  (Session info: chrome=100.0.4896.75)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;Ashutoshs-Air&apos;, ip: &apos;fe80:0:0:0:81c:e8e1:c594:608c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3.1&apos;, java.version: &apos;11.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [70a734e87053f07cc738c594475fc3a1, findElement {using=name, value=btnk}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/kj/lp0h3xp941q...}, goog:chromeOptions: {debuggerAddress: localhost:58020}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58020/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 70a734e87053f07cc738c594475fc3a1
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at myTest.SampleTest.googleSearchBtnTest(SampleTest.java:38)
+<h2>OpenCart Test</h2><h3 id="m0">AppTest.OpenCartTest#registerLinkTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">AppTest.OpenCartTest#urlTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>OrangeHRM Test</h2><h3 id="m2">AppTest.OrangeHRMTest#contactSalesTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">AppTest.OrangeHRMTest#urlTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Google Test</h2><h3 id="m4">AppTest.GoogleTest#googleSearchBtnTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at AppTest.GoogleTest.googleSearchBtnTest(GoogleTest.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,7 +54,7 @@ Session ID: 70a734e87053f07cc738c594475fc3a1
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">myTest.SampleTest#searchTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">myTest.SampleTest#urlTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">AppTest.GoogleTest#searchTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">AppTest.GoogleTest#urlTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

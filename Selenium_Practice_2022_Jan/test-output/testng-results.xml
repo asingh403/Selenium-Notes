@@ -1,55 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-06T19:31:55Z" name="Default suite" finished-at="2022-04-06T19:32:16Z" duration-ms="20639">
+  <suite started-at="2022-04-07T19:41:56Z" name="Regression Test" finished-at="2022-04-07T19:42:32Z" duration-ms="36856">
     <groups>
     </groups>
-    <test started-at="2022-04-06T19:31:55Z" name="Default test" finished-at="2022-04-06T19:32:16Z" duration-ms="20639">
-      <class name="myTest.SampleTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:myTest.SampleTest@236e3f4e]" started-at="2022-04-06T19:31:55Z" name="setUp" finished-at="2022-04-06T19:32:06Z" duration-ms="10398" status="PASS">
+    <test started-at="2022-04-07T19:41:56Z" name="OpenCart Test" finished-at="2022-04-07T19:42:08Z" duration-ms="12658">
+      <class name="AppTest.OpenCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AppTest.OpenCartTest@236e3f4e]" started-at="2022-04-07T19:41:56Z" name="setUp" finished-at="2022-04-07T19:42:06Z" duration-ms="10419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="googleSearchBtnTest()[pri:0, instance:myTest.SampleTest@236e3f4e]" started-at="2022-04-06T19:32:06Z" name="googleSearchBtnTest" finished-at="2022-04-06T19:32:16Z" duration-ms="10056" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="registerLinkTest()[pri:1, instance:AppTest.OpenCartTest@236e3f4e]" started-at="2022-04-07T19:42:06Z" name="registerLinkTest" finished-at="2022-04-07T19:42:08Z" duration-ms="2113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerLinkTest -->
+        <test-method signature="urlTest()[pri:2, instance:AppTest.OpenCartTest@236e3f4e]" started-at="2022-04-07T19:42:08Z" name="urlTest" finished-at="2022-04-07T19:42:08Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AppTest.OpenCartTest@236e3f4e]" started-at="2022-04-07T19:42:08Z" name="tearDown" finished-at="2022-04-07T19:42:08Z" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AppTest.OpenCartTest -->
+    </test> <!-- OpenCart Test -->
+    <test started-at="2022-04-07T19:42:08Z" name="OrangeHRM Test" finished-at="2022-04-07T19:42:24Z" duration-ms="15834">
+      <class name="AppTest.OrangeHRMTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AppTest.OrangeHRMTest@13b13b5d]" started-at="2022-04-07T19:42:08Z" name="setUp" finished-at="2022-04-07T19:42:14Z" duration-ms="6025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="contactSalesTest()[pri:1, instance:AppTest.OrangeHRMTest@13b13b5d]" started-at="2022-04-07T19:42:14Z" name="contactSalesTest" finished-at="2022-04-07T19:42:24Z" duration-ms="9712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactSalesTest -->
+        <test-method signature="urlTest()[pri:2, instance:AppTest.OrangeHRMTest@13b13b5d]" started-at="2022-04-07T19:42:24Z" name="urlTest" finished-at="2022-04-07T19:42:24Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AppTest.OrangeHRMTest@13b13b5d]" started-at="2022-04-07T19:42:24Z" name="tearDown" finished-at="2022-04-07T19:42:24Z" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AppTest.OrangeHRMTest -->
+    </test> <!-- OrangeHRM Test -->
+    <test started-at="2022-04-07T19:42:24Z" name="Google Test" finished-at="2022-04-07T19:42:32Z" duration-ms="8314">
+      <class name="AppTest.GoogleTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AppTest.GoogleTest@6a6afff2]" started-at="2022-04-07T19:42:24Z" name="setUp" finished-at="2022-04-07T19:42:30Z" duration-ms="5460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchTest()[pri:1, instance:AppTest.GoogleTest@6a6afff2]" started-at="2022-04-07T19:42:30Z" name="searchTest" finished-at="2022-04-07T19:42:32Z" duration-ms="2664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="googleSearchBtnTest()[pri:2, instance:AppTest.GoogleTest@6a6afff2]" started-at="2022-04-07T19:42:32Z" name="googleSearchBtnTest" finished-at="2022-04-07T19:42:32Z" duration-ms="51" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='btnk']"}
-  (Session info: chrome=100.0.4896.75)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'Ashutoshs-Air', ip: 'fe80:0:0:0:81c:e8e1:c594:608c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3.1', java.version: '11.0.14'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [70a734e87053f07cc738c594475fc3a1, findElement {using=name, value=btnk}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/kj/lp0h3xp941q...}, goog:chromeOptions: {debuggerAddress: localhost:58020}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58020/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 70a734e87053f07cc738c594475fc3a1]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='btnk']"}
-  (Session info: chrome=100.0.4896.75)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'Ashutoshs-Air', ip: 'fe80:0:0:0:81c:e8e1:c594:608c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3.1', java.version: '11.0.14'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [70a734e87053f07cc738c594475fc3a1, findElement {using=name, value=btnk}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/kj/lp0h3xp941q...}, goog:chromeOptions: {debuggerAddress: localhost:58020}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58020/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 70a734e87053f07cc738c594475fc3a1
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at myTest.SampleTest.googleSearchBtnTest(SampleTest.java:38)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at AppTest.GoogleTest.googleSearchBtnTest(GoogleTest.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,23 +94,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleSearchBtnTest -->
-        <test-method signature="searchTest()[pri:0, instance:myTest.SampleTest@236e3f4e]" started-at="2022-04-06T19:32:16Z" name="searchTest" finished-at="2022-04-06T19:32:16Z" duration-ms="64" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTest -->
-        <test-method signature="urlTest()[pri:0, instance:myTest.SampleTest@236e3f4e]" started-at="2022-04-06T19:32:16Z" name="urlTest" finished-at="2022-04-06T19:32:16Z" duration-ms="10" status="PASS">
+        <test-method signature="urlTest()[pri:3, instance:AppTest.GoogleTest@6a6afff2]" started-at="2022-04-07T19:42:32Z" name="urlTest" finished-at="2022-04-07T19:42:32Z" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:myTest.SampleTest@236e3f4e]" started-at="2022-04-06T19:32:16Z" name="tearDown" finished-at="2022-04-06T19:32:16Z" duration-ms="83" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AppTest.GoogleTest@6a6afff2]" started-at="2022-04-07T19:42:32Z" name="tearDown" finished-at="2022-04-07T19:42:32Z" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- myTest.SampleTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- AppTest.GoogleTest -->
+    </test> <!-- Google Test -->
+  </suite> <!-- Regression Test -->
 </testng-results>
